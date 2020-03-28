@@ -1,0 +1,26 @@
+using System;
+
+namespace Exercicio05
+{
+    class Program
+    {
+        /*Desenvolva um método que receba por parâmetro o um nome, e retorne a frase 
+            “Olá meu nome é: {nome recebido}”.
+
+        */
+
+
+        public static string Nome () //Criei uma função que ira me retornar uma string
+        {
+            
+            Console.Write("Qual seu nome: ");
+            string Resposta = Console.ReadLine();
+            return Resposta;
+        }
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Olá meu nome é " + Nome()); //Chamei a minha função
+        }
+    }
+}
