@@ -1,0 +1,78 @@
+using System;
+
+namespace Aula_03
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //LOOP
+
+            //Tipos de looping: while, do while,for, foreach, funcoes recursivas
+
+            int a = 1;
+
+            while (a < 5)
+            {
+                Console.WriteLine("CodeGirl" + a);
+                a = a + 1; // a = a + 1 éigual a a++
+            }
+
+            var b = 1;
+
+            while (b ==1)
+            {
+                Console.WriteLine(b);
+
+                if (b ==1)
+                {
+                    break;
+                }
+            }
+            
+            var c = 1;
+
+            while(c <5)
+            {
+                if (c==1)
+                {
+                    c++;
+                    continue;
+                }
+
+                Console.WriteLine(c);
+                c++;
+            }
+
+            var d = 1;
+
+
+            //do while
+
+            do
+            {
+                Console.WriteLine(d);
+                d++;
+
+            }while(d<5);
+
+            //For
+
+            
+            for (var t=1; t<5; t++)
+            {
+                Console.WriteLine(t);
+            }
+
+            //Foreach: é usado para array
+
+            int [] num = {1,2,3};
+            foreach(int p in num)
+            {
+                Console.WriteLine(p);
+            }
+         
+
+        }
+    }
+}
