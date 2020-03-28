@@ -1,0 +1,83 @@
+using System;
+
+namespace Exercicio03
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*Desenvolver o algoritimo para calcular. O algoritimo deve ser capaz de permitir que o usuário
+            escolha o tipo de operacao (adicao, subtração, multiplicacao ou divisao), poderá escolhero primeiro 
+            numero da operacao e o segundo numero 
+            */
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+
+            Console.WriteLine("==========================");
+            Console.WriteLine("MAQUINA DE CALCULAR ENIGMA");
+            Console.WriteLine("==========================");
+
+
+            Console.WriteLine("Tipos de Operação:");
+            Console.WriteLine("[1] Adição");
+            Console.WriteLine("[2] Subtração");
+            Console.WriteLine("[3] Multiplicação");
+            Console.WriteLine("[4] Divisão");
+
+            Console.Write("Qual operação você quer realizar: "); //Coloquei Console.Write para que a resposta dousuariofique na linha do qual a sua escolha
+            int RespostaUsuario = Convert.ToInt32(Console.ReadLine());
+
+
+
+            if (RespostaUsuario == 1)
+            {
+                Console.Write("Digite o primeiro numero: ");
+                int PrimeiroNumero = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Digite o segundo numero: ");
+                int SegundoNumero = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("O Resultado da operação é: " + (PrimeiroNumero + SegundoNumero));
+            } 
+
+            
+
+            else if (RespostaUsuario == 2)
+            {
+                Console.Write("Digite o primeiro numero: ");
+                int PrimeiroNumero = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Digite o segundo numero: ");
+                int SegundoNumero = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("O Resultado da operação é: " + (PrimeiroNumero - SegundoNumero));
+            } 
+
+            
+
+            else if (RespostaUsuario == 3)
+            {
+                Console.Write("Digite o primeiro numero: ");
+                int PrimeiroNumero = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Digite o segundo numero: ");
+                int SegundoNumero = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("O Resultado da operação é: " + (PrimeiroNumero * SegundoNumero));
+            } 
+
+            
+
+            else
+            {
+                Console.Write("Digite o primeiro numero: ");
+                int PrimeiroNumero = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Digite o segundo numero: ");
+                int SegundoNumero = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("O Resultado da operação é: " + (PrimeiroNumero / SegundoNumero));
+            } 
+
+        }
+    }
+}
