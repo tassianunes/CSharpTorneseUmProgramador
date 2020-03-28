@@ -1,0 +1,58 @@
+using System;
+
+namespace Aula_05
+{
+    class Program
+    {
+
+
+        //Criando minha função
+
+        public static int calcular()
+        {
+            int a = 1;
+            int b = 1;
+            int c = a = b;
+            return c;
+        }
+
+        public static void MensagemNaTela()
+        {
+            Console.WriteLine("NeuroHacker");
+
+        }
+
+        public static void Tabuada(int numero)
+        {
+            for (int i = 1; i <=10; i++)
+            {
+                Console.WriteLine(numero + " X " + i + " = " + (i*numero));
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            //FUNÇÕES
+
+            //Sintaxe função: local, tipo, return, nome (tipo NomeParametros)
+
+            //local: public,private, intern, protected
+            //tipo: static, non static
+            //return: int, float, string, bool, void. OBS: o void é ounico que nao retorna nada, entao nao precisa o return
+
+
+            Console.WriteLine(calcular());
+            MensagemNaTela(); //Para funcoes voids é so chamar a função para ser executada
+            Tabuada(7);
+
+            for (int i = 1; i <=10; i++)
+            {
+                Tabuada(i);
+                Console.WriteLine("=============");
+            }
+
+
+
+        }
+    }
+}
