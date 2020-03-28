@@ -1,0 +1,17 @@
+using System;
+
+namespace Exercicio02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Criar Algoritmo que leia o nome do usuario e mostre na tela
+
+            Console.Write("Digite seu nome: ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Olá " + name + " seja bem vindo ao NeuroHacking!");
+        }
+    }
+}
