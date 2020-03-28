@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+
+
+namespace Aula_04
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //ARRAY E COLECTIONS
+
+            //Os arrays e collections são variáveis que armazenam varios itens, diferente das variaveis simples
+
+            //No array geralmente ja declara quantos intens tem dentro. No cllections pode ser adicionado posteriormente
+
+            //Sintaxe array: tipo [] NomeDoArray = new tipo [Numero de itens];
+            //Sintaxe collection: List<tipo> NomeCollection = new List<tipo>();
+
+            string [] name = new string[5];
+
+            name[0] = "Tássia";
+            name[1] = "Tâmara";
+            name[3] = "Zion";
+            name[4] = "Shawn";
+
+            Console.WriteLine(name[0]);
+
+            foreach(string a in name)
+            {
+                Console.WriteLine(a);
+
+            }
+
+            //Collection
+
+            List<string> NamePeople = new List<string>();
+            NamePeople.Add("Camila");
+            NamePeople.Add("Thiago");
+            NamePeople.Add("Rafael");
+
+            Console.WriteLine(NamePeople[0]);
+
+            foreach(string nomePessoas in NamePeople)
+            {
+                Console.WriteLine(nomePessoas);
+            }
+            
+        
+        }
+    }
+}
