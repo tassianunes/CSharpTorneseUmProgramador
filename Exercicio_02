@@ -8,6 +8,15 @@ namespace Exercicio02
         {
             //Criar Algoritmo que leia o nome do usuario e mostre na tela
 
+
+            /* Observacao: O comando Console.Write e Console.WriteLine funcionam para mesma coisa. 
+            Os dois servem para imprimir algo na tela, mas não espera o usuario responder. O Console.Write escreve
+            na mesma linha, ja oConsole.WriteLine escreve em linha separada.
+
+            Para que o usuario possa digitar algo e interagir com o programa é necessario usar o Console.Readline()
+            
+            
+            */
             Console.Write("Digite seu nome: ");
             string name = Console.ReadLine();
 
