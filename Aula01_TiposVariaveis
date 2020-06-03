@@ -6,9 +6,10 @@ namespace Curso_TorneSeUmProgramador
     {
         static void Main(string[] args)
         {
-
-            //Para criar novo documento: dotnet new console
-            //Para rodar o programa: console run
+        
+            //Primeiro: apertar o comando (Ctrl + ') :  Esse comando serve para abrir o terminal
+            //Segundo: No terminal digitar: dotnet new console (abre um novo pragrama em c#)
+            //Terceiro: Para rodar o programa: dotnet run
             
             //TIPOS DE VARIÁVEIS
 
