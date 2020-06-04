@@ -1,70 +1,91 @@
 using System;
 
-namespace Curso_TorneSeUmProgramador
+namespace CursoVSCodeSantander
 {
     class Program
     {
         static void Main(string[] args)
         {
-        
-            //Primeiro: apertar o comando (Ctrl + ') :  Esse comando serve para abrir o terminal
-            //Segundo: No terminal digitar: dotnet new console (abre um novo pragrama em c#)
-            //Terceiro: Para rodar o programa: dotnet run
+            //Aula2 - TIPOS DE VARIÁVEIS
+
+
+            /* Como fazer para abrir um arquivo para C#:
+
+            Ctrl + ' : Serve para abrir o terminal
+            dotnet new console: Abre um novo programa em C# já presetado
+            dotnet run: rodar o código 
+            */
+
+            /*Tipagem de variável
+
+            Variável estática: Já declara qual o tipo da variável (ex: int number = 1;)
+            Variável dinâmica: Não declara qual é o tipo dela (ex: var number = 1;)
+            */
             
-            //TIPOS DE VARIÁVEIS
-
-            /*Todas as variáveis no C# devem ser declarados seu tipo, são eles: 
-            int(um inteiro menor), Long(inteiro maior), string(para varios caracteres), char(uma string de um caracter),
-            float(numeros com casas flutuantes pequenos), double(semelhante ao float mas aceita mais casas flutuantes), 
-            decimal(semelhante ao float e double mas aceita mais casas flutuantes. 
-            Primeiro vem o float,depois o double,ddepois decimal),bool, byte
+            /*Tipos de variáveis: 
+            
+            String: Variáveis para escrever caracteres. Esta formada por um conjunto de chars
+            Char: é uma variável de apenas 1 caracter
+            byte
+            Int: variáveis de números inteiras (tem um limite)
+            Long: variavel para numeros inteiros (numeros grandes)
+            Float: variáveis de números flutuantes (menor do que o double)
+            Double: variáveis de números flutuantes intermediário
+            Decimal: variável de numero flutuante grande
+            Boolean: variável de true or false
+            
+            *** Variáveis menos usadas: uint, sbyte, short,ushort,ulong
             */
 
-            /*As variáveis podem ser declarasde duas maneiras:Maneira estática e de maneira dinâmica
-            Tipagem Estatica - quando declara o tipo de variável. Ex: int,string,bool,float
-            Tipagem Dinamica - quandonao declara o tipo de variável e sa o var, este iraidentificar 
-            qual o tipo de variavel
+            /*Conversões de Variáveis:
+
+            Primeira forma: Conervt.ToTipodeVariávelFinal() (EX: Convert.ToInt(), Convert.ToString())
+            Segunda forma: Cast ou dinamica - Var (Não entendi)
+            Terceira Forma: .Parse 
             */
+            
+            
+            
+            Console.WriteLine("Hello World Tassia!"); //Comando para printar tela e pula para a proxima linga
+            Console.Write("Tássia"); //Comando para printar tela mas nao pula a linha
+            Console.Write("Tamara");
+            Console.WriteLine("");
+            Console.WriteLine("Testando Variáveis");
 
-            int NumerosAlunos = 25;
-            var NumerosAlunos2 = 30;
+            
+            int number = 50;
+            var numberNew = 80;
+            Console.WriteLine(number);
+            Console.WriteLine(numberNew);
 
-            string NomeAluno = "Tássia";
-            var NomeAluno2 = "Tâmara";
+            string name = "Tássia";
+            var nameNew = "Tássia";
+            Console.WriteLine(name);
+            Console.WriteLine(nameNew);
 
-            float media = 1.5f;
-            var media2 = 2.55;
+            float moeda = 1.5f;
+            var moedaNew = 1.5f;
+            Console.WriteLine(moeda);
+            Console.WriteLine(moedaNew);
 
-            bool resposta = true;
-            bool resposta2 = false;
-            var resposta3 = true;
-            var resposta4 = false;
+            bool code = false;
+            bool code2 = true;
+            Console.WriteLine(code);
+            Console.WriteLine(code2);
 
-            Console.WriteLine(NumerosAlunos);
-            Console.WriteLine(NumerosAlunos2);
-            Console.WriteLine(NomeAluno);
-            Console.WriteLine(NomeAluno2);
-            Console.WriteLine(media);
-            Console.WriteLine(media2);
-            Console.WriteLine(resposta);
-            Console.WriteLine(resposta2);
-            Console.WriteLine(resposta3);
-            Console.WriteLine(resposta4);
+            
+            //CONVERSÃO EXEMPLOS
+            
+            bool codigo = bool.Parse("false"); //A função .Parse sempre irá converter uma string em algo. Nesse caso, Converte a string false em um boleano
+            Console.WriteLine(codigo);
+
+            int idade = int.Parse("35");//Converteu a string 35 em um inteiro
+            Console.WriteLine(idade);
+
+            bool codigo2 = Convert.ToBoolean(false); //A função Convert.To aceita qualquer tipo de variável
+            Console.WriteLine(codigo2);
 
 
-            //TIPOS DE CONVERSAO
-
-            //Existem dois tipos de conversao: estatica(ConvertTO) e dinamica (cast)
-
-            bool boolean = bool.Parse("false");//Esta convertendo a string false para boleano
-            bool boolean2 = Convert.ToBoolean("false"); //esta convertendo a string false para boleano  
-
-            /*A diferenca do Parse para Convert.To é que o parse so aceita string para ser convertido.
-            Ja o Convet.To aceita qualquer tipo de variavel
-            */
-
-            Console.WriteLine(boolean);
-            Console.WriteLine(boolean2);
 
 
 
