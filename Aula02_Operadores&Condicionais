@@ -1,0 +1,65 @@
+using System;
+
+namespace CursoCSharp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //AULA 03 - OPERADORES LÓGICOS E CONDICIONAIS
+
+            //Operadores Lógicos: == (igual), ! (not), != (diferente), && (e), || (ou), > (maior), < (menor) + (mais), - (menos), * (multiplicação), / (divisão)       
+            
+            //Tipos de Condicionais: Comum (if, else, else if), SwitchCase, Ternário
+
+            //If, Else e else if
+
+            var number = 49;
+            if(number < 50)
+            {
+                Console.WriteLine("Welcome NeuroHacker!");
+                Console.WriteLine("Hacking the Neuro circuit");
+                Console.WriteLine("CountDown!!!");
+            }
+            
+            else if (number == 50)
+            {
+                Console.WriteLine("Cannot hack the system");
+            }
+
+            else
+            {
+                Console.WriteLine("You hack the system!");
+            }
+
+
+            //Switch(case)
+
+            int numero = 2;
+
+            switch(numero)
+            {
+                case 1: //Se a variável 1 for igual a 1 mostrar Funcionou o caso 1
+                    Console.WriteLine("Funcionou o caso 1");
+                    break;
+                
+                case 2:
+                    Console.WriteLine("Funcionou o caso 2");
+                    break;
+
+                case 3:
+                    Console.WriteLine("Funcionou o caso 3");
+                    break;
+
+            }
+
+            //Ternário
+
+            var a = 1;
+            string teste = (a == 1? "O valor de a" : "mais um");// Isso representa um ternário. ? (Se a for igual a 1) print o valor de a, : (se não) print mais um
+            Console.WriteLine("Olá pessoal" + teste);
+                
+
+        }
+    }
+}
