@@ -1,35 +1,44 @@
 using System;
 
-namespace Aula_03
+namespace Aula04
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //LOOP
+            //Tipos de Loops: while, do while, for, for each, funções recursivas
 
-            //Tipos de looping: while, do while,for, foreach, funcoes recursivas
+            var number = 1;
 
-            int a = 1;
 
-            while (a < 5)
+            // Existem 04 maneiras de quebrar um looping com while: utilizando um contador, condicional e  break, apenas o break, continue
+
+            while(number < 5)
             {
-                Console.WriteLine("CodeGirl" + a);
-                a = a + 1; // a = a + 1 éigual a a++
+                Console.WriteLine("Teste looping while e contador");
+                number += 1;  //Usando contador: É o mesmo que number = number = 1  ou numeber++ (isso funciona como um contador)
             }
 
-            var b = 1;
+            var numberNew = 1;
 
-            while (b ==1)
+            while(numberNew < 5)
             {
-                Console.WriteLine(b);
+                Console.WriteLine("Teste looping while e break com condicional");
 
-                if (b ==1)
+                if(numberNew == 1) //Usando Condicional e break
                 {
                     break;
                 }
             }
-            
+
+            var numberNew2 = 1;
+
+            while(numberNew2 < 5)
+            {
+                Console.WriteLine("Teste looping while");
+                break;
+            }
+
             var c = 1;
 
             while(c <5)
@@ -37,42 +46,57 @@ namespace Aula_03
                 if (c==1)
                 {
                     c++;
-                    continue;
+                    continue; //Usando o continue
                 }
 
                 Console.WriteLine(c);
                 c++;
             }
 
-            var d = 1;
 
+            //OPERAÇÃO COM DO WHILE
 
-            //do while
+            var numberTest = 1;
 
             do
             {
-                Console.WriteLine(d);
-                d++;
+                
+                Console.WriteLine("Teste looping Do While");
+                Console.WriteLine(numberTest);
+                numberTest++;
+            }while(numberTest<=3);
 
-            }while(d<5);
 
-            //For
+        //LOOPING COM FOR
 
-            
-            for (var t=1; t<5; t++)
-            {
-                Console.WriteLine(t);
-            }
+        for(int idade = 1; idade < 5; idade++) // No for ja instancia tudo: a variável, o range e o contador
+        {
+            Console.WriteLine("teste looping for");
+            Console.WriteLine(idade);
+        }
 
-            //Foreach: é usado para array
-
-            int [] num = {1,2,3};
-            foreach(int p in num)
-            {
-                Console.WriteLine(p);
-            }
-         
 
         }
+
+        //LOOPING USANDO FOREACH
+        //O foreach é usado principalmente em array
+
+        /*string[] nomes = { "André", "Bruna", "Carla", "Daniel" }; //criando um array
+ 
+		foreach (string nome in nomes) //ira fazer um looping no qual armazenara os itens do array na variavel nome
+		{
+		  Console.WriteLine(nome);
+		}
+        */
+        
+
+        //FUNÇÃO RECURSIVA: A função chama a própria função
+        // Estudar mais sobre função recurssiva
+    
+
+
+
+
+
     }
 }
