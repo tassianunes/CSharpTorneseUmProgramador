@@ -1,52 +1,61 @@
 using System;
 using System.Collections.Generic;
 
-
-namespace Aula_04
+namespace Aula05
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //ARRAY E COLECTIONS
+            //ARRAY E COLLECTION: São variáveis composta e que prtato armazenam varios itens ddentro dela
 
-            //Os arrays e collections são variáveis que armazenam varios itens, diferente das variaveis simples
+            //Sintaxe Array: Tipo[] nome_do_array = new tipo [numero de posições]
+            //Sintaxe Collection: List<tipo> nomeDaVAriAvel = new nomeCollection<tipo>()
 
-            //No array geralmente ja declara quantos intens tem dentro. No cllections pode ser adicionado posteriormente
+            //Diferença array e collection: no array ja declara quantos espaço será armazenado e na collection não
 
-            //Sintaxe array: tipo [] NomeDoArray = new tipo [Numero de itens];
-            //Sintaxe collection: List<tipo> NomeCollection = new List<tipo>();
+            string [] nomes = new string[4];
 
-            string [] name = new string[5];
+            nomes[0] = "Tássia";
+            nomes[1] = "Tâmara";
+            nomes[2] = "Suely";
+            nomes[3] = "Vinícius";
 
-            name[0] = "Tássia";
-            name[1] = "Tâmara";
-            name[3] = "Zion";
-            name[4] = "Shawn";
+            //Primeira forma de mostrar o que tem no array
+            Console.WriteLine(nomes[0]); 
+            Console.WriteLine(nomes[1]); 
+            Console.WriteLine(nomes[2]); 
+            Console.WriteLine(nomes[3]); 
 
-            Console.WriteLine(name[0]);
 
-            foreach(string a in name)
+            //Segunda forma de mostrar o que tem no array usando o looping foreach
+            foreach(string name in nomes)
             {
-                Console.WriteLine(a);
-
+                Console.WriteLine(name);
             }
 
-            //Collection
+            int [] idades = {10, 15, 20, 25}; //Também posso criar um array já informando quains são os valores dentro dele
 
-            List<string> NamePeople = new List<string>();
-            NamePeople.Add("Camila");
-            NamePeople.Add("Thiago");
-            NamePeople.Add("Rafael");
-
-            Console.WriteLine(NamePeople[0]);
-
-            foreach(string nomePessoas in NamePeople)
+            foreach (int idade in idades)
             {
-                Console.WriteLine(nomePessoas);
-            }
-            
-        
+                Console.WriteLine(idade);
+            } 
+
+            //Criando collections
+
+            List<string> namesStudents = new List<string>();
+            namesStudents.Add("Larissa");
+            namesStudents.Add("Carlos");
+            namesStudents.Add("Fábio");
+
+            Console.WriteLine(namesStudents[0]);
+            Console.WriteLine(namesStudents[1]);
+            Console.WriteLine(namesStudents[2]);
+
+
+
+
+
         }
     }
 }
