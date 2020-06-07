@@ -1,0 +1,41 @@
+using System;
+
+namespace CursoCSharp
+{
+    class Program
+    
+    {
+
+        public const int SAIDA_PROGRAMA = 1; //Criei uma variavel constante. Geralmente variaveis constantes sao escritas em maiusculo e separado por underline
+           
+        
+        static void Main(string[] args)
+        {
+            //Variaveis constantes: são aquelas variaveis imutaveis
+
+            //Sintaxe variavel constante: local const tipo nome = valor
+            //local: public, private, protected, internal
+            //const: palavra reservada para variaveis constantes
+            //tipo: int, string, bool, float
+            //nome: atribuir o nome que eu quiser a constante
+
+            while(true)
+            {
+                Console.WriteLine("Digite " + SAIDA_PROGRAMA + " para sair do programa");
+
+                int valor = int.Parse(Console.ReadLine()); //vai ler a resposta do usuário e converter em um inteiro
+                if(SAIDA_PROGRAMA == valor)
+                {
+                    Console.WriteLine("Você optou por sair!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Você optou por continuar no programa!");
+                }
+            }
+
+
+        }
+    }
+}
