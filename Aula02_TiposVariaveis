@@ -44,6 +44,13 @@ namespace CursoVSCodeSantander
             Terceira Forma: .Parse 
             */
             
+            /*Como declarar uma variável
+            Existem duas maneiras de declarar uma variável:
+            (1) Local tipo nomeVariavel velor(opcional): ex: public int idade; ou public int idade = 25;
+            (2) Tipo nomeVariavel velor(opcional): ex: int idade; ou int idade = 25;
+
+            */
+            
             
             
             Console.WriteLine("Hello World Tassia!"); //Comando para printar tela e pula para a proxima linga
