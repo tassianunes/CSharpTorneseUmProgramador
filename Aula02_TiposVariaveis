@@ -11,6 +11,8 @@ namespace CursoVSCodeSantander
 
             /* Como fazer para abrir um arquivo para C#:
 
+
+            criar uma pasta
             Ctrl + ' : Serve para abrir o terminal
             dotnet new console: Abre um novo programa em C# já presetado
             dotnet run: rodar o código 
