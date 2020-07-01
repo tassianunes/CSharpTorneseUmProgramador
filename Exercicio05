@@ -1,0 +1,21 @@
+using System;
+
+namespace Exercicio05
+{
+    class Program
+    {
+        //Exercicio 05: Faça um programa que leia um numero inteiro e mostre seu antecessor e seu sucessor
+
+        static void Main(string[] args)
+        {
+            Console.Write("Digite um número: ");
+            int NumberUser = Int32.Parse(Console.ReadLine());
+
+            int NumBefore = NumberUser - 1;
+            int NumAfter = NumberUser + 1;
+
+            Console.WriteLine("Analisando o valo {0}, seu antecessor é {1} e seu sucessor {2}", NumberUser, NumBefore, NumAfter);
+
+        }
+    }
+}
