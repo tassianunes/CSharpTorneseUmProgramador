@@ -1,0 +1,27 @@
+using System;
+
+namespace Exercicio04
+{
+    class Program
+    {
+        /*Exercicio 04: Faça um programa que leia algo pelo teclado e mostre na tela o seu tipo 
+        primitivo e todas as informações possiveis sobre ele
+        */
+
+        static void Main(string[] args)
+        {
+            //Outra maneira de printar sem usar o + para concatenar 
+
+            string name1 = "Tassia";
+            string name2 = "Tamara";
+            Console.WriteLine("Olá {0} e {1} ", name1, name2);
+
+            //Console.WriteLine(typeof(name1));
+            
+
+            //Nao consegui fazer esse exercicio
+
+
+        }
+    }
+}
