@@ -1,0 +1,82 @@
+using System;
+
+namespace Exercicio08
+{
+    class Program
+    {
+
+        // Crie um programa que leia um valor em metros e exiba a conversão desse valoe em km, hm, dam, dm, cm, mm
+        
+        public static void CalcularDistancia (float ValorDistancia)
+        {
+            Console.Write("Digite uma distância em metros: ");
+            ValorDistancia = float.Parse(Console.ReadLine());
+
+            int conv = 1;
+
+            while(conv <= 1000000)
+            {
+                float Valor = ValorDistancia * conv;
+                Console.WriteLine(Valor);
+                conv *= 10;
+                
+            }
+
+
+        }
+        
+        static void Main(string[] args)
+        {
+
+            // PRIMEIRA FORMA DE FAZER:
+
+            /*
+            Console.Write("Digite uma distância em metros: ");
+            float ValorDistancia = float.Parse(Console.ReadLine());
+
+            float ValorKm = ValorDistancia / 1000;
+            Console.WriteLine("{0} km", ValorKm);
+
+            float ValorHm = ValorDistancia / 100;
+            Console.WriteLine("{0} Hm", ValorHm);
+
+            float ValorDam = ValorDistancia / 10;
+            Console.WriteLine("{0} dam", ValorDam);
+
+            float ValorDm = ValorDistancia * 10;
+            Console.WriteLine("{0} dm", ValorDm);
+
+            float ValorCm = ValorDistancia * 100;
+            Console.WriteLine("{0} cm", ValorCm);
+
+            float ValorMm = ValorDistancia * 1000;
+            Console.WriteLine("{0} mm", ValorMm);
+
+            */
+
+            //SEGUNDA FORMA DE FAZER:
+
+            /*
+            Console.Write("Digite uma distância em metros: ");
+            float ValorDistancia = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("{0} km", ValorDistancia / 1000);
+            Console.WriteLine("{0} Hm", ValorDistancia / 100);
+            Console.WriteLine("{0} Dam", ValorDistancia / 10);
+            Console.WriteLine("{0} dm", ValorDistancia * 10);
+            Console.WriteLine("{0} cm", ValorDistancia * 100);
+            Console.WriteLine("{0} mm", ValorDistancia * 1000);
+            
+            */
+
+            //TERCEIRA FORMA DE FAZER: 
+
+
+            CalcularDistancia(0); 
+
+
+
+
+        }
+    }
+}
