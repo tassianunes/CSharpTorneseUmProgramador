@@ -1,0 +1,28 @@
+using System;
+
+namespace Exercicio07
+{
+    class Program
+    {
+
+        //Crie um programa que leia duas notas do aluno e calcule a média aritmética
+
+
+        static void Main(string[] args)
+        {
+        
+
+            Console.Write("Primeira nota do aluno: ");
+            float PrimeiraNota = float.Parse(Console.ReadLine());
+            Console.Write("Segunda nota do aluno: ");
+            float SegundaNota = float.Parse(Console.ReadLine());
+
+            float media = (PrimeiraNota + SegundaNota) / 2;
+
+            Console.WriteLine("A média entre {0} e {1} é {2}", PrimeiraNota, SegundaNota, media);
+
+            //PS ao Usuário: Ao informar as notas utilize , ao inves de .
+            
+        }
+    }
+}
