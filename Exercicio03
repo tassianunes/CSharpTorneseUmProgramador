@@ -1,0 +1,33 @@
+using System;
+
+namespace Exercicio03
+{
+    class Program
+    {
+
+        //Exercicio 03: Crie um programa que leia dois numeros e some
+
+        public static int FrstNumber;
+        public static int ScndNumber; 
+        public static int sume;
+
+        static void Main(string[] args)
+        {
+            Console.Write("Digite um primeiro número: ");
+            FrstNumber = Int32.Parse(Console.ReadLine());
+
+            Console.Write("Digite o segundo número: ");
+            ScndNumber = Int32.Parse(Console.ReadLine());
+
+            sume = FrstNumber + ScndNumber;
+
+            Console.WriteLine(FrstNumber + " + " + ScndNumber + " = " + sume);
+
+
+
+
+
+
+        }
+    }
+}
