@@ -1,38 +1,38 @@
 using System;
 
-namespace Exercicio01
+namespace CursoCSharp
 {
     class Program
     {
+         //Exercício 01: Criar programa que mostre na tela Olá mundo!
+
+
+        private static string NameUser; //Criei uma variável privada static do tipo string com nome de NameUser
+
         static void Main(string[] args)
         {
-            //Exercicios tirado do site https://www.satellasoft.com/?materia=lista-de-exercicios-em-csharp
-
-            // Desenvolva um algoritmo que solicite um numero ao usuario e calcule se o numero é par ou impar
-
-            
-            
-            Console.ForegroundColor = ConsoleColor.Magenta; //Altera a cor
-            Console.WriteLine("=========================");
-            Console.WriteLine("NeuroHacker code Bootcamp");
-            Console.WriteLine("=========================");
-            
            
-           Console.Write("Digite um numero: "); //Ler o numero
-           int numero = Convert.ToInt32(Console.ReadLine()); //armazenar o numero em uma variavel e ira converter
-        
-            if (numero % 2 == 0)
-            {
-                Console.WriteLine("O numero " + numero + " é par");
-            }
 
-            else
-            {
-                Console.WriteLine("O nummero " + numero + " é impar");
-                
-            }
             
-           
+            Console.WriteLine("Hello World!"); //Console.WriteLine: Escreva na tela e pule uma linnha
+            Console.Write("What is your name: "); //Console.Write: Escreva na tela e não pule linha
+
+            //Caso eu não quisesse criar a variável la em cima, poderia ser assim:
+            //string NameUser = Console.ReadLine();
+
+            NameUser = Console.ReadLine(); //Console.ReadLine(): Ler a linha completa do que o usuário irá escrever e sempre retorna uma string
+            
+            Console.Write("What is your age: ");
+            int IdadeUser = Int32.Parse(Console.ReadLine()); // .Parse: Sempre converte uma string em algo. Nesse caso esta convertendo para inteiro
+
+            Console.Write("What is your major: ");
+            string MajorUser = Console.ReadLine();
+
+            Console.WriteLine("Hello welcome aboard to the Neurohacker's world!");
+            Console.WriteLine(NameUser + ", " + IdadeUser + ", "  + MajorUser);
+
+
+
         }
     }
 }
