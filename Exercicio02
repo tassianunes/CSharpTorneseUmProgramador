@@ -1,0 +1,22 @@
+using System;
+
+namespace Exercicio02
+{
+    class Program
+    {
+        //Exercício 02: Faça um programa que leia o nome da pessoa e mostre msg de boas vindas
+
+        private static string NameUser;
+
+        static void Main(string[] args)
+        {
+            
+            Console.Write("Qual é o seu nome: ");
+            NameUser = Console.ReadLine(); //Vai ler o que o usuario escre e retorna uma string
+
+            Console.WriteLine("Olá " + NameUser + " seja bem vinda" );
+
+
+        }
+    }
+}
