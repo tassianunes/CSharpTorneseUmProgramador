@@ -1,0 +1,49 @@
+using System;
+
+namespace CursoCSharp
+{
+    class Program
+    {
+        //Faça um programa que leia um numero inteiro qualquer e mostre na tela na tela a sua tabuada 
+
+
+        public static void Tabuada (int NumeroTabuada)
+        {
+            Console.Write("Digite um número para ver sua tabuada: ");
+            NumeroTabuada = Int32.Parse(Console.ReadLine());
+
+
+            for(int i = 0; i<=10; i++)
+            {
+                Console.WriteLine("{0} x {1} = {2}", NumeroTabuada, i, NumeroTabuada*i);
+                
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            //Primeira Forma:
+
+            /*
+            Console.Write("Digite um número para ver sua tabuada: ");
+            int NumTabuada = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine(NumTabuada + " X " + " 1 " + " = " + NumTabuada*1 );
+            Console.WriteLine(NumTabuada + " X " + " 2 " + " = " + NumTabuada*2 );
+            Console.WriteLine(NumTabuada + " X " + " 3 " + " = " + NumTabuada*3 );
+            Console.WriteLine(NumTabuada + " X " + " 4 " + " = " + NumTabuada*4 );
+            Console.WriteLine(NumTabuada + " X " + " 5 " + " = " + NumTabuada*5 );
+            Console.WriteLine(NumTabuada + " X " + " 6 " + " = " + NumTabuada*6 );
+            Console.WriteLine(NumTabuada + " X " + " 7 " + " = " + NumTabuada*7 );
+            Console.WriteLine(NumTabuada + " X " + " 8 " + " = " + NumTabuada*8 );
+            Console.WriteLine(NumTabuada + " X " + " 9 " + " = " + NumTabuada*9 );
+            Console.WriteLine(NumTabuada + " X " + " 10 " + " = " + NumTabuada*10 );
+            */
+
+
+            //Segunda forma:
+
+            Tabuada(0); //Chamando a função ou método Tabuada, que foi declarado antes da classe Main
+        }
+    }
+}
