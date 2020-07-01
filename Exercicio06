@@ -1,0 +1,27 @@
+using System;
+
+namespace Exercicio06
+{
+    class Program
+    {
+        //Exercicio 06: Crie um programa que leia um numero e calcule o dobro, triplo e raiz quadrada
+
+        static void Main(string[] args)
+        {
+            Console.Write("Digite um número: ");
+            int numeroUser = Int32.Parse(Console.ReadLine());
+
+            //int dobro = numeroUser * 2;
+            //int triplo = numeroUser * 3;
+            double raiz = Math.Sqrt(numeroUser); 
+            
+            //O double é um float para numeros flutuantes com tamanho intermediário
+            //Para caucular a raiz de um número: Math.Sqrt(numero);
+
+            //Console.WriteLine("Analisando o número {0}, seu dobro é {1}, seu triplo é {2} e sua raiz é {3}", dobro, triplo, raiz);
+            Console.WriteLine(raiz);
+
+            //Ps: Consegui fazer o calculo da raiz. Mas não consegui printar o dobro e triplo
+        }
+    }
+}
