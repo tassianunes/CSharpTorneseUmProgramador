@@ -1,0 +1,22 @@
+using System;
+
+namespace Exercicio12
+{
+    class Program
+    {
+        // Faça um algoritmo que leia o preço de um produto e  mostre seu novo preço, com 5% de desconto
+
+
+        static void Main(string[] args)
+        {
+            Console.Write("Qual é o preço do produto: ");
+            float PrecoProduto = float.Parse(Console.ReadLine());
+
+            float porcentagem = (PrecoProduto * 5) / 100;
+            float NovoPreco = PrecoProduto - porcentagem;
+
+            Console.WriteLine("O produto que custava {0} na promoção com desconto de 5% vai custar {1}",
+            PrecoProduto, NovoPreco.ToString("F"));
+        }
+    }
+}
