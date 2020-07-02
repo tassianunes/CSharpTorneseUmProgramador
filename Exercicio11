@@ -1,0 +1,28 @@
+using System;
+
+namespace Exercicio11
+{
+    class Program
+    {
+        // Faça um programa que leia a altura e largura de uma parede em metros. Calcule a sua área e a 
+        // quantidade de tinta necessária para pinta-la. Sabendo que cada litro de tinta pinta 2m quadrados.
+
+        static void Main(string[] args)
+        {
+            Console.Write("Largura da parede: ");
+            float LarguraParede = float.Parse(Console.ReadLine());
+
+            Console.Write("Altura da parede: ");
+            float AlturaParede = float.Parse(Console.ReadLine());
+
+            float AreaParede = LarguraParede * AlturaParede; 
+            float LitroTinta = AreaParede/2;
+
+            Console.WriteLine("Sua parede tem a dimensão de {0} x {1} e sua área é de {2} m2", 
+            LarguraParede, AlturaParede, AreaParede);
+            
+            Console.WriteLine("Para pintar essa parede você precisa de {0}", LitroTinta );
+
+        }
+    }
+}
