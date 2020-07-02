@@ -1,0 +1,21 @@
+using System;
+
+namespace Exercicio16
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Crie um programa que leia um numero real qualquer pelo teclado  e mostre na tela 
+            //a sua porção inteira
+
+            Console.Write("Digite um valor: ");
+            double ValorDigitado = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ovalor digitado foi {0} e a sua porção inteira é {1}", 
+            ValorDigitado, Math.Truncate(ValorDigitado)); 
+
+            //O Math. Truncate serve para cortar os numeros flutuantes e retonar apenas a parte inteira.
+        }
+    }
+}
