@@ -1,0 +1,28 @@
+using System;
+
+namespace Exercicio15
+{
+    class Program
+    {
+        /* Escreva um programa que pergunte a quantidade de Km percorridos por um carro alugado e a quantidade 
+            de dias pelo qual ele foi alugado. CAlcule o preço a pagar, sabendo que o carro custa 60 reais
+            por dia e 0,15 por Km rodado.    
+        */
+       
+
+        
+        static void Main(string[] args)
+        {
+            Console.Write("Quantos dias alugados: ");
+            int DiasAluguel = Int32.Parse(Console.ReadLine());
+
+            Console.Write("Quanto quilometros rodados: ");
+            float Quilometros = float.Parse(Console.ReadLine());
+
+            double Price = (DiasAluguel * 60) + (Quilometros * 0.15);
+
+            Console.WriteLine("O total a pagar é de: R${0}", Price.ToString("F"));
+            
+        }
+    }
+}
