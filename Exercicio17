@@ -1,0 +1,27 @@
+using System;
+
+namespace Exercicio17
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /* Faça um programa que leia o comprimento do  cateto oposto e do cateto adjascentede um
+            trianhulo retangulo, calcule e mostre o comprimento da hipotenusa
+            */
+
+
+            Console.Write("Comprimento do cateto oposto: ");
+            float CatetoOposto = float.Parse(Console.ReadLine());
+
+            Console.Write("Conprimento da Hipotenusa: ");
+            float CatetoAdjascente = float.Parse(Console.ReadLine());
+
+            //float Hipotenusa  = (CatetoOposto**2 + CatetoAdjascente**2) ** 1/2;
+            double Hipotenusa = Math.Sqrt(Math.Exp(CatetoOposto) + Math.Exp(CatetoAdjascente));
+            Console.WriteLine("A hipotenusa vai medir: {0}", Hipotenusa.ToString("F"));
+
+            //PS: A lógica da programação esta correta, mas o calculo da hipotenusa esta erra
+        }
+    }
+}
