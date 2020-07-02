@@ -1,0 +1,23 @@
+using System;
+
+namespace Exercicio10
+{
+    class Program
+    {
+        //Crie um programa que leia quanto dinheiro uma pessoa tem na carteira e mostre quantos dolares ela 
+        //pode comprar. Considere: 1 U$ = 3,27 R$
+
+        static void Main(string[] args)
+        {
+            Console.Write("Quanto dinheiro você tem na carteira: ");
+            float MoneyWallet = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Com {0} dolares você pode comprar {1} reais", MoneyWallet, (MoneyWallet/3.27).ToString("F") );
+            // O método .ToString("F") permite com que o valor possa ser mostrado apenas com duas casas decimais
+
+
+            //Ps: use , quando for informar o valor a ser convertido
+
+        }
+    }
+}
