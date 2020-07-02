@@ -1,0 +1,22 @@
+using System;
+
+namespace Exercicio14
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Escreva um programa que converta uma temperatura em graus Celcius para farenheit
+
+            Console.Write("Informe a temperatura em graus Celcius: ");
+            float TemperaturaCelcius = float.Parse(Console.ReadLine());
+            float ConversorTemp = (TemperaturaCelcius * 9 / 5) + 32;
+
+            Console.WriteLine("A temperatura de {0} C equivale a {1} F", TemperaturaCelcius, ConversorTemp);
+
+
+
+
+        }
+    }
+}
