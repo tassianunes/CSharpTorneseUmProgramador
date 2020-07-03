@@ -1,0 +1,59 @@
+using System;
+
+namespace Exercicio19
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Um professor quer sortear um dos quatros alunos para apagar o quadro. faça um 
+            // Programa que ajude a ele, lendo o nome deles e escrevendo o nome do escolhido.   
+            
+
+
+            ///<summary>
+            ///Essa aplicação recebe informações do usuário, armazena os nomes do usuário em um array
+            ///e cria um loop usando o foreach para mostra os nomes de todos os estudantes.
+            
+            Console.Write("Primeiro aluno: ");
+            string PrimeiroAluno = (Console.ReadLine());
+            Console.Write("Segundo aluno: ");
+            string SegundoAluno = (Console.ReadLine());
+            Console.Write("Terceiro aluno: ");
+            string TerceiroAluno = (Console.ReadLine());
+            Console.Write("Quarto aluno: ");
+            string QuartoAluno = (Console.ReadLine());
+
+            string [] NameStudents = {PrimeiroAluno, SegundoAluno, TerceiroAluno, QuartoAluno};
+
+            foreach (var name in NameStudents)
+            {
+                Console.WriteLine(name);
+            }
+
+            Console.WriteLine("O aluno escolhido foi {0}", Random.Next(NameStudents));
+
+
+
+            /*PS: O summary é usado pelo visual studio para documentar um método ou função criada. 
+                  Para declarar um summary: 
+
+                  Exemplo:
+
+                    /// <summary>
+                    /// Método selecionar padrão. Recebe uma lista de operadores para selecionar do banco e devolver uma lista
+                    /// </summary>
+                    /// <param name="operadores"></param>
+                    /// <param name="tipoResolucao"></param>
+                    /// <returns>Lista de operadores tipada.</returns>
+                    /// <remarks>Deve ser implementado em cada classe derivada.</remarks>
+
+                    summary: Um resumo do que o método faz;
+                    param (podem ser colocados vários): Os parâmetros utilizados pelo método, se houver;
+                    returns: Explicação geral sobre o retorno do método, se houver;
+                    remarks: Observações sobre o método, que sejam útil para outros programadores.
+            */
+            
+        }
+    }
+}
