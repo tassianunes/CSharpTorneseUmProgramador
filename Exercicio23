@@ -1,0 +1,41 @@
+using System;
+
+namespace Exercicio23
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Faça um programa que leia um número de 0  9999 e mostre na tela cada um dos digitos separados
+
+            Console.Write("Informe um número: ");
+            string NumeroUser = (Console.ReadLine());
+
+            if (NumeroUser.Length == 1)
+            {
+                Console.WriteLine("Analisando o número: {0} \nUnidade: {1} \nDezena: {2} \nCentena: {3} \nMilhar: {4}",
+                NumeroUser, NumeroUser[0], "0", "0", "0");
+            }
+            else if(NumeroUser.Length == 2)
+            {
+                Console.WriteLine("Analisando o número: {0} \nUnidade: {1} \nDezena: {2} \nCentena: {3} \nMilhar: {4}",
+                NumeroUser, NumeroUser[1], NumeroUser[0], "0", "0");
+            }
+            else if(NumeroUser.Length == 3)
+            {
+                Console.WriteLine("Analisando o número: {0} \nUnidade: {1} \nDezena: {2} \nCentena: {3} \nMilhar: {4}",
+                NumeroUser, NumeroUser[2], NumeroUser[1], NumeroUser[0], "0");
+            }
+            else 
+            {
+                Console.WriteLine("Analisando o número: {0} \nUnidade: {1} \nDezena: {2} \nCentena: {3} \nMilhar: {4}",
+                NumeroUser, NumeroUser[3], NumeroUser[2],NumeroUser[1], NumeroUser[0]);
+            }
+            
+            //Console.WriteLine("Analisando o número: {0} \nUnidade: {1} \nDezena: {2} \nCentena: {3} \nMilhar: {4}",
+            //NumeroUser, NumeroUser[3], NumeroUser[2],NumeroUser[1], NumeroUser[0]);
+
+
+        }
+    }
+}
