@@ -1,0 +1,25 @@
+using System;
+
+namespace Exercicio25
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Crie um programa que leia o nome de uma pessoa e diga se ela tem "Silva no nome
+            Console.Write("Qual o seu nome completo: ");
+            string NameUser = Console.ReadLine();
+            string NameUserCap = NameUser.ToUpper();
+
+            if(NameUserCap.Contains("SILVA"))// o Método .Contains Faz a checagem de  de caracteres
+            {
+                Console.WriteLine("True");
+
+            }
+            else
+            {
+                Console.WriteLine("False");
+            }
+        }
+    }
+}
