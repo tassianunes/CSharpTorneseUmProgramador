@@ -1,0 +1,34 @@
+using System;
+
+
+namespace Exercicio22
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Crie um programa que leia o nome completo de uma pessoa e mostre:
+            //>> O nome com todas as letras maiusculas e minusculas
+            //>>Quantas letras ao todo sem considerar espaço
+            //>>Quantas letras tem o primeiro nome
+
+            Console.Write("Digite seu nome completo: ");
+            string NameUser = Console.ReadLine();
+            string NameUserSpaceless = NameUser.Replace(" ", "");// NomeVariavel.Replace(" ", ""): Substitui os espaços varios em qualquer canto
+            string NameUserType2 = NameUser.Trim(); //Remove os espaços vazios do inicio e do fim
+
+            //Ps: .TrimStart() remove os espaços varios do inicio
+            //    .TrimEnd() remove os espaços varios do final
+
+            Console.WriteLine("Seu nome em maiusculo é: {0}", NameUser.ToUpper());
+            Console.WriteLine("Seu nome em maiusculo é: {0}", NameUser.ToLower());
+            Console.WriteLine("Numero de caracteres com espaço: {0}", NameUser.Length); //Conta os caracteres com espaço
+            Console.WriteLine("Numero de caracteres sem espaço: {0}", NameUserSpaceless);
+            Console.WriteLine("Numero de caracteres sem espaço: {0}", NameUserSpaceless.Length);
+            Console.WriteLine("Numero de caracteres sem espaço: {0}", NameUserType2);
+                        
+
+
+        }
+    }
+}
