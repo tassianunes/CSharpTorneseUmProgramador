@@ -1,0 +1,27 @@
+using System;
+
+namespace Exercicio24
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome "Santos"
+            
+            Console.Write("Em que cidade você nasceu: ");
+            string NameCity = Console.ReadLine();
+            string NameCityCap = NameCity.ToUpper();
+                 
+            
+            if(NameCityCap.Contains("SANTOS"))
+            {
+                Console.WriteLine("True");
+            }
+            else
+            {
+                Console.WriteLine("false");
+            }
+            
+        }
+    }
+}
