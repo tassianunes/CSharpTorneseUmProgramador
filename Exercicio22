@@ -12,6 +12,7 @@ namespace Exercicio22
             //>>Quantas letras ao todo sem considerar espaço
             //>>Quantas letras tem o primeiro nome
 
+            
             Console.Write("Digite seu nome completo: ");
             string NameUser = Console.ReadLine();
             string NameUserSpaceless = NameUser.Replace(" ", "");// NomeVariavel.Replace(" ", ""): Substitui os espaços varios em qualquer canto
@@ -26,8 +27,20 @@ namespace Exercicio22
             Console.WriteLine("Numero de caracteres sem espaço: {0}", NameUserSpaceless);
             Console.WriteLine("Numero de caracteres sem espaço: {0}", NameUserSpaceless.Length);
             Console.WriteLine("Numero de caracteres sem espaço: {0}", NameUserType2);
-                        
+            string[] words = NameUser.Split(' '); //Divide a frase em palavras e armazena em um array
+            Console.WriteLine(words[0]);// Mostrar o primeiro índice do array criado
+            Console.WriteLine(words[0].Length);//Conta quantas letras tem no primeiro indice do array    
 
+
+            /*
+            foreach(string word in words) // Cria um loop para mostrar o que tem no array
+            {
+                Console.WriteLine(word[0]);
+            }
+            */
+
+            
+            
 
         }
     }
