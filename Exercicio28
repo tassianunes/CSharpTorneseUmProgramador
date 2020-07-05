@@ -1,0 +1,45 @@
+using System;
+using System.Threading; //classe usada para tempo
+
+namespace Exercicio28
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /* Faça um programa que faça o computador pensar em um numero inteiro entre 0 e 5e peça para o usuário 
+            tentar descobrir qual foi o numero escolhido pelo computador . O programa eve informar na tela se o usuario
+            venceu ou perdeu
+            */
+
+            
+            Console.WriteLine(new string('=', 55));
+            Console.WriteLine("Vou pensar em um numero entre 0 e 5. Tente advinhar...");
+            Console.WriteLine(new string('=', 55));
+
+            Console.Write("Em que numero pensei: ");
+            int ChoiceUser = Int32.Parse(Console.ReadLine());
+            
+            Random rnd = new Random(); //Classe random criou objeto chamado de rnd qe usa o metodo next para retornar inteiro aleatorio
+            int RandNumber = rnd.Next(0,6);//O metodo cria um rang minimo e maximo de numeros
+            Console.WriteLine("PENSANDO...");
+            Thread.Sleep(2000);
+            //Console.WriteLine(RandNumber);
+
+            if (ChoiceUser == RandNumber)
+            {
+                Console.WriteLine("PARABÉNS! Você conseguiu me vencer!");
+            }
+            else
+            {
+                Console.WriteLine("DESCULPA! Você perdeu");
+            }
+
+
+            
+            //ps:Aspas simples serve para char(string de um caracter) e aspas duplas serve para string
+
+        }
+    }
+}
+
