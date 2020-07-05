@@ -1,0 +1,18 @@
+using System;
+
+namespace Exercicio27
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //FAça um programa que leia o primeiro e ultimo nome de uma pessoa e mostre o primeiro e ultimo nome 
+            //separadamente
+            Console.Write("Digite seu nome completo: ");
+            string NameUser = Console.ReadLine();
+            string [] NameUserSplit = NameUser.Split(' ');// .Split divide a frase em palavras e armazena em um array
+            Console.WriteLine("Seu primeiro nome é: {0}\nSeu ultimo nome é: {1}", 
+            NameUserSplit[0], NameUserSplit[NameUserSplit.Length-1]); //.length-1 recebe o ultimo elemento 
+        }
+    }
+}
