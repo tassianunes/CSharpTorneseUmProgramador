@@ -1,1 +1,26 @@
+using System;
+
+namespace Exercicio26
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*Faca um programa que leia uma frase pelo teclado e mostre:
+              >>quantas vezes aparece a letra A
+              >> Em que posição aparece a primeira vez
+              >> Em que posição aparece a ultima vez
+            */
+
+
+            Console.WriteLine("Digite uma frase: ");
+            string NameUser = Console.ReadLine();
+            string Upper = NameUser.ToUpper();
+            int count = Upper.Count(f => f == 'A');
+            //string LetterA = Upper.Contains("A");
+            Console.WriteLine("A letra A aparece {0} vezes na frase", count);
+            
+        }
+    }
+}
 
