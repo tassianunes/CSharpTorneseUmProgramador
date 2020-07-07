@@ -1,0 +1,29 @@
+using System;
+
+namespace Exercicio31
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Desenvolva um programa que pergunte a distancia de uma viagem em km. Calcule o preço da passagem, cobrando
+            // R$ 0,50 por km para cada viagem de ate 200 km e R$ 0,45 para viagens mais longas.
+
+            int DistanciaViagem;
+            Console.Write("Qual a distância da sua viagem: ");
+            
+            DistanciaViagem = Int32.Parse(Console.ReadLine());
+
+            if (DistanciaViagem <= 200)
+            {
+                Console.WriteLine("O valor da sua viagem é de {0}", DistanciaViagem * 0.50);
+            }
+            else
+            {
+                Console.WriteLine("O valor da sua viagem é de {0}", DistanciaViagem * 0.45);
+   
+            }
+
+        }
+    }
+}
