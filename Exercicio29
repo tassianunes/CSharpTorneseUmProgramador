@@ -1,0 +1,31 @@
+using System;
+
+namespace Exercicio29
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Escreva um programa que leia a velocidade de um carro. Se ele ultrpassar 80 km/h mostre uma msg dizendo que 
+            // ele foi multado. A multa vai custar RS 7,00 por cada Km acima do limite
+
+            Console.Write("Qual a velocidade atual do carro: ");
+            int Velocidade = Int32.Parse(Console.ReadLine());
+            int Multa = (Velocidade - 80) * 7;
+
+            
+            if(Velocidade > 80)
+            {
+                Console.WriteLine("MULTADO! Você excedeu o limite permitido que é de 80km/h\nVocê deve pagar uma multa de R${0}!",
+                Multa);
+                Console.WriteLine("Tenha um bom dia! Dirija com segurança");
+            }
+            else
+            {
+                Console.WriteLine("PARABÉNS! Você esta dentro dos limites de velocidade!");
+            }
+            
+            
+        }
+    }
+}
