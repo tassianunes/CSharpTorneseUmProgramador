@@ -1,0 +1,28 @@
+using System;
+
+namespace Exercicio30
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Crie um programa que leia um numero inteiro e mostre na tela se ele é impar ou par 
+
+            Console.Write("Me diga um número qualquer: ");
+            int NumberUser = Int32.Parse(Console.ReadLine());
+            
+            if(NumberUser%2 == 0) // % calcula o resto a divisão. Um numero é considerado par quando o resto da divisão por 2 é igual a 0
+            {
+                Console.WriteLine("O Numero {0} é par!", NumberUser); 
+            }
+            else
+            {
+                Console.WriteLine("O Numero {0} é Impar!", NumberUser);
+            }
+
+
+
+
+        }
+    }
+}
