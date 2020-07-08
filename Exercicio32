@@ -1,0 +1,27 @@
+using System;
+
+namespace Exercicio32
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Faca um prgrama que leia um ano qualquer e diga se ele é bissexto
+
+            Console.Write("Que ano quer analisar: ");
+            int Ano = Int32.Parse(Console.ReadLine());
+
+            
+            if (Ano % 4 == 0)
+            {
+                Console.WriteLine("Esse ano é bissexto");
+            }
+            else
+            {
+                Console.WriteLine("Esse ano não é bissexto");
+            }
+            
+
+        }
+    }
+}
