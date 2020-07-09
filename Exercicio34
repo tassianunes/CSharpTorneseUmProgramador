@@ -1,0 +1,31 @@
+using System;
+
+namespace Exercicio34
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Escreva um programa que pergunte o salario de um funcionario e calcule o valor do seu aumento
+            //Para o salario superior a 1250, calcule um aumento de 10%. Para os inferiores ou iguais, aumento de 15%
+
+            Console.Write("Qual é o salario do funcionário: ");
+            float Salario = float.Parse(Console.ReadLine());
+
+            float AumentoFirst = Salario + ((Salario * 10) / 100);
+            float AumentoSecond = Salario + ((Salario * 15) / 100);
+
+            if (Salario > 1250)
+            {
+                Console.WriteLine("Quem ganhava {0} passa a ganher {1} agora.", Salario, AumentoFirst);
+            }
+            else
+            {
+                Console.WriteLine("Quem ganhava {0} passa a ganher {1} agora.", Salario, AumentoSecond);
+
+            }
+
+
+        }
+    }
+}
