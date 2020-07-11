@@ -1,0 +1,46 @@
+using System;
+
+namespace Exercicio36
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*Escreva um programa para aprovar o emprestimo bancario para a compra de  uma casa. Pergunteo valor da casa, o
+            salario do comprador e em quantos anos ele vai pagar. A prestação mensal nao pode exceder 30% do salario ou 
+            entao o emprestimo será negado.
+            */
+
+            float ValorCasa;
+            float Salario;
+            int Financiamento;
+            int  FinanciamentoMeses;
+            float Prestação;
+
+            Console.Write("Valor da casa: ");
+            ValorCasa = float.Parse(Console.ReadLine()); 
+            
+            Console.Write("Salario do comprador: ");
+            Salario = float.Parse(Console.ReadLine());
+            
+            Console.Write("Quantos anos de financiamento: ");
+            Financiamento = Int32.Parse(Console.ReadLine());
+            FinanciamentoMeses = Financiamento * 12; // Considerando que 1 ano tem 12 meses. Temos que calcular quanto será pago mensal
+
+            Prestação = ValorCasa/FinanciamentoMeses;
+
+            if (Prestação > (Salario*30)/100)
+            {
+                Console.WriteLine("Para pegar uma casa de R$ {0} em {1} anos a prestação será de\n{2}. Empréstimo NEGADO",
+                ValorCasa, FinanciamentoMeses, Prestação);
+            }
+            else
+            {
+                Console.WriteLine("Para pegar uma casa de R$ {0} em {1} anos a prestação será de\n{2}. Empréstimo CONCEDIDO",
+                ValorCasa, FinanciamentoMeses, Prestação);
+            }
+
+
+        }
+    }
+}
