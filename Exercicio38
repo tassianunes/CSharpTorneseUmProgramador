@@ -1,0 +1,37 @@
+using System;
+
+namespace Exercicio38
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*Escreva um programa que leia dois numeros inteiros e compare-os, mostrando na tela uma mensagem:
+            - O primeiro valor é maior
+            - O Segundo valor é maior 
+            - Nao existe valores maior, os dois são iguais
+            */
+
+            int FirstNum;
+            int SecNum;
+            Console.Write("Primeiro Numero: ");
+            FirstNum = Int32.Parse(Console.ReadLine());
+            Console.Write("Segundo numero: ");
+            SecNum = Int32.Parse(Console.ReadLine());
+
+            if (FirstNum > SecNum)
+            {
+                Console.WriteLine("O primeiro valor é maior");
+            }
+            else if (SecNum > FirstNum)
+            {
+                Console.WriteLine("O Seguno valor é maior");
+            }
+            else
+            {
+                Console.WriteLine("Os dois valores são iguais");
+            }
+
+        }
+    }
+}
