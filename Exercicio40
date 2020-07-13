@@ -1,0 +1,44 @@
+using System;
+
+namespace Exercicio40
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*Crie um programa que leia duas notas de um aluno e calcule sua média. Mostrando uma mensagem no final, de
+            acordo com a média atingida: 
+            - Média abaixo de 5.0: REPROVADO
+            - Média entre 5.0 e 6.9: RECUPERAÇÃO
+            - Média 7.0 ou superior: APROVADO
+            */
+
+            float FirstGrade;
+            float SecondGrade;
+            float Media;
+
+            Console.Write("Primeira Nota: ");
+            FirstGrade = float.Parse(Console.ReadLine());
+            Console.Write("Segunda Nota: ");
+            SecondGrade = float.Parse(Console.ReadLine());
+            Media = (FirstGrade+SecondGrade)/2;
+            
+            if(Media < 5.0)
+            {
+                Console.WriteLine("Tirando {0} e {1}, a media do aluno é {2}.\nO aluno esta em REPROVADO!",
+                FirstGrade,SecondGrade, Media);
+
+            }
+            else if(5.0 < Media && Media < 6.9 )
+            {
+                Console.WriteLine("Tirando {0} e {1}, a media do aluno é {2}.\nO aluno esta em RECUPERAÇÃO!",
+                FirstGrade,SecondGrade, Media);
+            }
+            else
+            {
+                Console.WriteLine("Tirando {0} e {1}, a media do aluno é {2}.\nO aluno esta em APROVADO!",
+                FirstGrade,SecondGrade, Media);
+            }
+        }
+    }
+}
