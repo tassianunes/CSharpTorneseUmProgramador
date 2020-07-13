@@ -1,0 +1,52 @@
+using System;
+
+namespace Exercicio41
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*A confederação Nacional de Natação precisa de um programa que leia o ano de nascimento de um atleta e 
+            mostre sua categoria, de acordo com sua idade: 
+            - Ate 9 anos: Mirim
+            - Ate 14 anos: Infantil
+            - Até 19 anos: Junior
+            - Até 25 anos: Sênior
+            - Acima: master
+            */
+
+            int BirthYear;
+            int CurrentYear;
+            int UserAge;
+
+            Console.Write("Ano e nascimento: ");
+            BirthYear = Int32.Parse(Console.ReadLine());
+            CurrentYear = 2020;
+            UserAge = CurrentYear - BirthYear;
+
+            if(UserAge <= 9)
+            {
+                Console.WriteLine("O atleta tem {0} anos.\n/classificação: MIRIM", UserAge);
+            }
+            else if (UserAge > 9 && UserAge<=14)
+            {
+                Console.WriteLine("O atleta tem {0} anos.\nclassificação: INFANTIL",UserAge);
+            }
+            else if(UserAge > 15 && UserAge<=19)
+            {
+                Console.WriteLine("O atleta tem {0} anos.\nclassificação: JUNIOR",UserAge);
+            }
+            else if(UserAge > 19 && UserAge<=25)
+            {
+                Console.WriteLine("O atleta tem {0} anos.\nclassificação: SENIOR",UserAge);
+            }
+            else
+            {
+                Console.WriteLine("O atleta tem {0} anos.\nclassificação: MASTER",UserAge);
+
+            }
+
+
+        }
+    }
+}
