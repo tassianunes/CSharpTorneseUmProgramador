@@ -1,0 +1,48 @@
+using System;
+
+namespace Exercicio39
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*Faça um programa que leia o ano de nascimento e um jovem e informe, de acordo com sua idade, 
+            se ele ainda vai se alistar ao serviço militar, se é a hora de se alistar ou se ja passou do tempo do
+            alistamento. Seu programa também deverá mostar o tempo que falta ou que passou do prazo.
+            */
+
+            int BirthUser;
+            int CurrentYear = 2020;
+            int CurrentAge;
+            int EnrollAge;
+            int EnrollYear;
+            int AgePassed;
+            int EnrollPassed;
+
+            Console.Write("Ano de Nascimento: ");
+            BirthUser = Int32.Parse(Console.ReadLine());
+            CurrentAge = CurrentYear - BirthUser;
+            EnrollAge = 18 - CurrentAge;
+            EnrollYear = CurrentYear + EnrollAge;
+            AgePassed = CurrentAge - 18;
+            EnrollPassed = CurrentYear - AgePassed;
+
+            if(CurrentAge < 18 )
+            {
+                Console.WriteLine("Quem nasceu em {0} tem {1} anos em 2020.\nAinda faltam {2} anos para o seu alistamento \nSeu alistamento sera em {3}",
+                BirthUser, CurrentAge, EnrollAge, EnrollYear);
+            }
+            else if (CurrentAge > 18)
+            {
+                Console.WriteLine("Quem nasceu em {0} tem {1} anos em 2020.\nJa passaram {2} anos para o seu alistamento \nSeu alistamento ocorreu em {3}",
+                BirthUser, CurrentAge, AgePassed, EnrollPassed);
+            }
+            else
+            {
+                Console.WriteLine("Quem nasceu em {0} tem {1} anos em 2020.\nFaça já seu alistamento",
+                BirthUser, CurrentAge);
+            }
+
+        }
+    }
+}
