@@ -1,0 +1,111 @@
+using System;
+using System.Threading;
+
+
+namespace Exercicio45
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Crie um programa que faça o computador jogar joKenPo com vc
+            
+
+            int ChoiceUser;
+            int PcChoice;
+
+            Console.WriteLine("=====VAMOS JOGAR JO KEN PO!!!======");
+            Console.WriteLine("Suas opções: ");
+            Console.WriteLine("[ 0 ] PEDRA\n[ 1 ] PAPEL\n[ 2 ] TESOURA");
+            Console.Write("Qual é a sua jogada: ");
+            ChoiceUser = Int32.Parse(Console.ReadLine());
+            
+            Random rnd = new Random();//A classe Random criou um objeto rnd que vai receber um new random
+            PcChoice = rnd.Next(1,4);// metodo next da classe rnd vai selecionar aleatoriamente um numero entre 1 e 3
+
+            Console.WriteLine("JO");
+            Thread.Sleep(1000);
+            Console.WriteLine("KEN");
+            Thread.Sleep(1000);
+            Console.WriteLine("PO");
+            Thread.Sleep(1000);
+
+            if (PcChoice == 0 && ChoiceUser == 0)
+            {
+                Console.WriteLine(new string('=', 20));//Comando para repetir o simbolo =
+                Console.WriteLine("Computador jogou PEDRA");
+                Console.WriteLine("Jogador jogou PEDRA");
+                Console.WriteLine("Ninguem ganha");
+                Console.WriteLine(new string('=', 20));//Comando para repetir o simbolo =
+
+            }
+            else if (PcChoice == 0 && ChoiceUser ==1)
+            {
+                Console.WriteLine(new string('=', 20));//Comando para repetir o simbolo =
+                Console.WriteLine("Computador jogou PEDRA");
+                Console.WriteLine("Jogador jogou PAPEL");
+                Console.WriteLine("VOCÊ VENCEU");
+                Console.WriteLine(new string('=', 20));
+            }
+            else if (PcChoice ==0 && ChoiceUser ==2)
+            {
+                Console.WriteLine(new string('=', 20));//Comando para repetir o simbolo =
+                Console.WriteLine("Computador jogou PEDRA");
+                Console.WriteLine("Jogador jogou TESOURA");
+                Console.WriteLine("COMPUTADOR VENCEU");
+                Console.WriteLine(new string('=', 20));
+            }
+            else if (PcChoice ==1 && ChoiceUser ==0)
+            {
+                Console.WriteLine(new string('=', 20));//Comando para repetir o simbolo =
+                Console.WriteLine("Computador jogou PAPEL");
+                Console.WriteLine("Jogador jogou PEDRA");
+                Console.WriteLine("COMPUTADOR VENCEU");
+                Console.WriteLine(new string('=', 20));
+            }
+            else if (PcChoice == 1 && ChoiceUser ==1)
+            {
+                Console.WriteLine(new string('=', 20));//Comando para repetir o simbolo =
+                Console.WriteLine("Computador jogou PAPEL");
+                Console.WriteLine("Jogador jogou PAPEL");
+                Console.WriteLine("Ninguem ganha");
+                Console.WriteLine(new string('=', 20));
+            }
+            else if (PcChoice ==1 && ChoiceUser ==2)
+            {
+                Console.WriteLine(new string('=', 20));//Comando para repetir o simbolo =
+                Console.WriteLine("Computador jogou PAPEPL");
+                Console.WriteLine("Jogador jogou TESOURA");
+                Console.WriteLine("VOCÊ GANHOU");
+                Console.WriteLine(new string('=', 20));
+            }
+            else if (PcChoice==2 && ChoiceUser == 0)
+            {
+                Console.WriteLine(new string('=', 20));//Comando para repetir o simbolo =
+                Console.WriteLine("Computador jogou TESOURA");
+                Console.WriteLine("Jogador jogou PEDRA");
+                Console.WriteLine("VOCE GANHOU");
+                Console.WriteLine(new string('=', 20));
+            }
+            else if (PcChoice ==2 && ChoiceUser ==1)
+            {
+                Console.WriteLine(new string('=', 20));//Comando para repetir o simbolo =
+                Console.WriteLine("Computador jogou TESOURA");
+                Console.WriteLine("Jogador jogou PAPEL");
+                Console.WriteLine("COMPUTADOR VENCE");
+                Console.WriteLine(new string('=', 20));
+            }
+            else
+            {
+                Console.WriteLine(new string('=', 20));//Comando para repetir o simbolo =
+                Console.WriteLine("Computador jogou TESOURA");
+                Console.WriteLine("Jogador jogou TESOURA");
+                Console.WriteLine("Ninguem ganha");
+                Console.WriteLine(new string('=', 20));
+            }
+
+
+
+        }
+    }
+}
