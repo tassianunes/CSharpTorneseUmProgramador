@@ -1,0 +1,50 @@
+using System;
+
+namespace Exercicio42
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*Desenvolva uma logica que leia o peso e a altura de uma pessoa, calcule se IMC e mostre seu status, de
+            acordo com a tabela abaixo: 
+            - Abaixo de 18.5 : Abaixo do peso
+            - Entre 18.5 e 25: peso ideal
+            - 25 ate 30: Sobrepeso
+            - 30 ate 40: obesidade
+            - Acima de 40: Obesidade morbida
+            */
+
+            Console.Write("Qual é seu peso (Kg): ");
+            float Peso = float.Parse(Console.ReadLine());
+            Console.Write("Qual sua altura: ");
+            float Altura = float.Parse(Console.ReadLine());
+            float IMC = Peso/(Altura*Altura);
+
+            if(IMC <18.5)
+            {
+                Console.WriteLine("O IMC dessa pessoa é de  {0}.\nVocê esta ABAIXO DO PESO IDEAL!",IMC);
+            }
+            else if (IMC >= 18.5 && IMC < 25)
+            {
+                Console.WriteLine("O IMC dessa pessoa é de  {0}.\nVocê esta no PESO IDEAL",IMC);
+
+            }
+            else if (IMC >= 25 && IMC < 30)
+            {
+                Console.WriteLine("O IMC dessa pessoa é de  {0}.\nVocê esta com SOBREPESO!",IMC);
+
+            }
+            else if (IMC >=30 && IMC < 40)
+            {
+                Console.WriteLine("O IMC dessa pessoa é de  {0}.\nVocê esta OBESIDADE!",IMC);
+
+            }
+            else
+            {
+                Console.WriteLine("O IMC dessa pessoa é de  {0}.\nVocê esta OBESIDADE MORBIDA!",IMC);
+
+            }
+        }
+    }
+}
