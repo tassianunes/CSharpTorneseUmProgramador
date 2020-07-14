@@ -1,0 +1,22 @@
+using System;
+using System.Threading;
+
+namespace CursoCSharp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*Fça um programa que mostre na tela uma contagem regressiva para o estouro de fogos de artificio,
+            indo de 10 ate 0 com uma pausa de 1 segunddo
+            */
+            
+            for(int i = 10; i >= 0; i--)
+            {
+                Console.WriteLine(i);
+                Thread.Sleep(1000);
+            }
+            Console.WriteLine("BUM!  BUM! BUM!");
+        }
+    }
+}
