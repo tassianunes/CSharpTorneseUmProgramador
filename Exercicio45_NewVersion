@@ -1,0 +1,84 @@
+using System;
+using System.Threading; //Método para fazer esperar (Timing)
+
+namespace Exercicio45_NewVersion
+{
+    class Program
+    {
+        public static void Intro()
+        {
+            Console.WriteLine("=====VAMOS JOGAR JO KEN PO!!!======");
+            Console.WriteLine("Suas opções: ");
+            Console.WriteLine("[ 0 ] PEDRA\n[ 1 ] PAPEL\n[ 2 ] TESOURA");
+        }
+        
+        public static string answer = "N";
+        
+        
+        public static void Game()
+        {
+            do
+            {
+                Console.Write("Qual é a sua jogada: ");
+                int ChoiceUser = Int32.Parse(Console.ReadLine());
+                Random rnd = new Random();
+                int PcChoice = rnd.Next(1,4);
+
+                
+                string [] name = {"JO", "KEN", "PO"};//Criei um array com as as letras que compoe a palavra jokenpo
+
+                foreach (string names in name) //loop para chamar as palavras 
+                {
+                    Console.WriteLine(names);//name: escrever jo, depois ken, depois po
+                    Thread.Sleep(1000);
+                }
+            
+                Console.WriteLine(new string('=', 20));//Comando para repetir o simbolo =
+                Console.WriteLine("Computador jogou {0}", PcChoice);
+                Console.WriteLine("Jogador jogou {0}", ChoiceUser);
+                
+                if (PcChoice == ChoiceUser)
+                {
+                    Console.WriteLine("EMPATE");
+                    Console.WriteLine(new string('=', 20));//Comando para repetir o simbolo =
+                }
+                else if (ChoiceUser != PcChoice)
+                {
+                    if (ChoiceUser == 0 && PcChoice ==1)
+                    {
+                        Console.WriteLine("VOCÊ PERDEU");
+                    }
+                    else if(ChoiceUser ==0 && PcChoice == 2)
+                    {
+                        Console.WriteLine("VOCÊ VENCEU");
+                    }
+                    else if (ChoiceUser ==1 && PcChoice == 0)
+                    {
+                        Console.WriteLine("VOCÊ VENCEU");
+                    }
+                    else if (ChoiceUser == 1 && PcChoice == 2)
+                    {
+                         Console.WriteLine("VOCÊ PERDEU");
+                    }
+                    else if (ChoiceUser ==2 && PcChoice == 0)
+                    {
+                        Console.WriteLine("VOCE PERDEU");
+                    }
+                    else
+                    {
+                        Console.WriteLine("VOCÊ VENCEU");
+                    }
+                }
+                Console.Write("Você quer continuar jogando [S/N]: ");
+                answer = Console.ReadLine();
+
+            } while (answer == "S");
+
+        }
+        static void Main(string[] args)
+        {
+            Intro();
+            Game();
+        }
+    }
+}
