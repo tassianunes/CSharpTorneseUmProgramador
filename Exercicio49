@@ -1,0 +1,32 @@
+using System;
+
+namespace Exercicio49
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Faça uma tabuada que continue e que so saia quando o usuario nao quiser mais continuar
+
+            Console.WriteLine("===========TABUADA==========");
+
+            string Resposta;
+            int Tabuada;
+            
+            do
+            {
+                Console.Write("Digite um numero para saber sua tabuada: ");
+                Tabuada = Int32.Parse(Console.ReadLine());
+
+                for(int i = 1; i<=10;i++)
+                {
+                    Console.WriteLine("{0} X {1} = {2}", Tabuada, i, Tabuada*i);
+                }
+
+                Console.Write("Voce quer continuar [S/N]: ");
+                Resposta = Console.ReadLine();
+                
+            } while (Resposta == "S");
+        }
+    }
+}
