@@ -1,0 +1,29 @@
+using System;
+
+namespace Exercicio50
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Desenvolva um programa que leia seis numeros inteiros e mostre a soma apenas daqueles que forem pares. 
+            // Se o valor digitado for impar, desconsidere-o.
+
+            int soma = 0;
+
+            for(int i = 1; i <=6; i++)
+            {
+                Console.Write("Digite um numero: ");
+                int numero = Int32.Parse(Console.ReadLine());
+
+                if(numero%2 == 0)
+                {
+                    soma = soma + numero;
+                }
+                
+            }
+            Console.WriteLine(soma);
+
+        }
+    }
+}
