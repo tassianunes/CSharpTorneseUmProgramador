@@ -1,0 +1,39 @@
+using System;
+
+namespace Exercicio54
+{
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+            // CRie um programa que leia o ano de nascimento de sete pessoas. No final mostre quantas pessoas 
+            //aina não atingiram a maioridade e quantas ja sao maiores.
+
+            int BirthYear;
+            int CurrentYear = 2020;
+            int CountMinor = 0;
+            int CountMajor = 0;
+
+
+            for (int i =1; i<=7; i++)
+            {
+                Console.Write("Em que ano a {0} pessoa nasceu: ", i);
+                BirthYear = Int32.Parse(Console.ReadLine());
+
+                if (CurrentYear - BirthYear < 18)
+                {
+                    CountMinor++;
+                }
+                else
+                {
+                    CountMajor++;
+                }
+            }
+
+            Console.WriteLine("Ao todo tivemos {0} pessoas maiores de idade.", CountMajor);
+            Console.WriteLine("E tambem tivemos {0} pessoas menores de idade.", CountMinor);
+        }
+    }
+}
