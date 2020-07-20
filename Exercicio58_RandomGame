@@ -1,0 +1,54 @@
+using System;
+
+namespace Exercicio58
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Melhore o jogo do desafio 28 onde o computador vai pensar em um numero entre 0 e 10. So que agora o 
+            // jogador vai tentar adivinhar ate acertar, mostrando no final quantos palpites foram necessario para vencer.
+            
+            int PcChoice;
+            int ChoiceUser;
+            int count = 0;
+
+            Console.WriteLine("Sou seu computador...");
+            Console.WriteLine("Acabei de pensar em um numero entre 0 e 10\nSerá que você consegue advinhar qual foi?");
+            
+            Random rnd = new Random();
+            PcChoice = rnd.Next(1,10);
+
+            do
+            {
+                Console.Write("Qual o seu palpite? ");
+                ChoiceUser = Int32.Parse(Console.ReadLine());
+
+                count++;
+
+                if(PcChoice > ChoiceUser)
+                {
+                    Console.WriteLine("Mais...Tente mais uma vez!");
+                }
+                else if(PcChoice < ChoiceUser)
+                {
+                    Console.WriteLine("Menos...Tente mais uma vez!");
+                }
+
+                else
+                {
+                    Console.WriteLine("Acertou em {0} tentativas. PARABÉNS!", count);
+                    break;
+                    
+                }
+
+
+
+            }while(PcChoice != ChoiceUser);      
+
+
+
+
+        }
+    }
+}
