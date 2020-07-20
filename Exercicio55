@@ -1,0 +1,43 @@
+using System;
+
+namespace Exercicio55
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Faça um programa que leia o peso de 5 pessoas. No final mostre qual foi o maior e o menor peso lidos.
+
+            float Peso;
+            float Maior = 0;
+            float Menor = 0;
+
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.Write("Peso da {0} pessoa: ", i);
+                Peso = float.Parse(Console.ReadLine());
+
+                if (i == 1)//Se for o primeiro loop, significa que o primeiro peso tanto será o maior como o menor, pois nao tem como compara-lo
+                {
+                    Maior = Peso;
+                    Menor = Peso;
+                }
+
+                else
+                {
+                    if(Peso > Maior)
+                    {
+                        Maior = Peso;
+                    }
+                    if(Peso < Menor)
+                    {
+                        Menor = Peso;
+                    }
+                }
+            
+            }
+            Console.WriteLine("O maior peso lido foi {0}", Maior);
+            Console.WriteLine("O menor peso lido foi {0}", Menor);
+        }
+    }
+}
