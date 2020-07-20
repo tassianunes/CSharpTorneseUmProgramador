@@ -1,0 +1,62 @@
+using System;
+
+namespace Exercicio56
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /* Desenvolva um programa que leia o nome, idade e sexo de 4 pessoas. No final do programa mostre:
+            - A media de idade do grupo
+            - Qual é o nome do homem mais velho 
+            - Quantas mulheres tem menos de 20 anos
+            */
+
+            string Name;
+            int Idade;
+            string Sexo;
+            float SomadorIdade = 0;
+            int MaisVelho = 0;
+            int MulherJovem = 0;
+
+
+            for(int i = 1; i <= 4; i++)
+            {
+                Console.WriteLine("------- {0} -------", i);
+                Console.Write("Nome: ");
+                Name = Console.ReadLine();
+                Console.Write("Idade: ");
+                Idade = Int32.Parse(Console.ReadLine());
+                Console.Write("Sexo [M/F]: ");
+                Sexo = Console.ReadLine();
+
+                SomadorIdade = SomadorIdade + Idade;
+                
+
+                if (i == 1 )
+                {
+                    MaisVelho = Idade;
+                }
+
+                else
+                {
+                    if (Idade > MaisVelho)
+                    {
+                        MaisVelho = Idade;
+                        
+                    }
+                }
+
+                if (Sexo == "F" && Idade < 20)
+                {
+                    MulherJovem++;
+                }
+
+            }
+
+            Console.WriteLine("A media de idade do grupo é de {0} anos", SomadorIdade/4);
+            Console.WriteLine("O homem mais velho tem {0} anos ", MaisVelho);
+            Console.WriteLine("Ao todo sao {0} mulheres com menos de 20 anos", MulherJovem);
+        }
+    }
+}
