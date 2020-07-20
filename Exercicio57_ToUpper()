@@ -1,0 +1,27 @@
+using System;
+
+namespace Exercicio57
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Crie um programa que leia o sexo de uma pessoa, mas so aceite os valores "M ou "F. Caso esteja errado
+            // peça a digitação novamente
+
+            string SexoUser = "";
+            
+            Console.Write("Informe seu sexo [M/F]: ");
+            SexoUser = Console.ReadLine().ToUpper(); 
+
+            while(SexoUser != "M" && SexoUser != "F")
+            {
+                Console.Write("Dados Invalidos. Por favor informe seu sexo: ");
+                SexoUser = Console.ReadLine().ToUpper();
+            }
+
+            Console.WriteLine("Sexo {0} registrado com sucesso!", SexoUser);
+
+        }
+    }
+}
