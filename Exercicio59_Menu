@@ -1,0 +1,69 @@
+using System;
+
+namespace Exercicio59
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*Crie um programa que leia dois valores  e mostre um menu como o que será mostrado logo abaixo. Seu programa
+            deverá realizar a operação solicitada em cada caso.
+            [ 0 ] Somar
+            [ 1 ] Multiplicar
+            [ 2 ] Maior
+            [ 3 ] Novos Numeros
+            [ 4 ] Sair do programa
+            */
+            
+            int PrimeiroValor;
+            int SegundoValor;
+            int Resposta;
+
+            do
+            {
+                Console.Write("Primeiro Valor: ");
+                PrimeiroValor = Int32.Parse(Console.ReadLine());
+                Console.Write("Segundo Valor: ");
+                SegundoValor = Int32.Parse(Console.ReadLine());
+
+                Console.WriteLine("[ 1 ] Somar\n[ 2 ] Multiplicar\n[ 3 ] Maior\n[ 4 ] Novos números\n[ 5 ] Sair do programa");
+                Console.Write(">>> Qual a sua opção: ");
+                Resposta = Int32.Parse(Console.ReadLine());
+
+                if (Resposta == 1)
+                {
+                    Console.WriteLine("A soma entre {0} + {1} é {2}", 
+                    PrimeiroValor, SegundoValor, PrimeiroValor + SegundoValor);
+                }
+                else if(Resposta == 2)
+                {
+                    Console.WriteLine("A multiplicação entre {0} X {1} é {2}",
+                    PrimeiroValor, SegundoValor, PrimeiroValor * SegundoValor);
+                }
+                else if(Resposta == 3)
+                {
+                    if(PrimeiroValor > SegundoValor)
+                    {
+                        Console.WriteLine("Entre {0} e {1} o maior é {2}", PrimeiroValor, SegundoValor, PrimeiroValor);
+                    }
+                    else if(SegundoValor > PrimeiroValor)
+                    {
+                        Console.WriteLine("Entre {0} e {1} o maior é {2}", PrimeiroValor, SegundoValor, SegundoValor);
+                    }
+                }
+                else if(Resposta==4)
+                {
+                    Console.WriteLine("Quais são os numeros novamente: ");
+                }
+                else
+                {
+                    break;
+                }
+                Console.WriteLine("=======================");
+
+            }while(Resposta != 5);
+                     
+
+        }
+    }
+}
