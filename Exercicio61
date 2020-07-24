@@ -1,0 +1,35 @@
+using System;
+
+namespace Exercicio61
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Refaça o desafio 51, lendo o primeiro termo e a razao de uma P. Mostrando os 10 primeiros termos da 
+            // progressao usando a estrutura while.
+
+            int Primeirotermo;
+            int Razao;
+            int Next;
+            int count = 1;
+
+            Console.Write("Primeiro Termo: ");
+            Primeirotermo = Int32.Parse(Console.ReadLine());
+            Console.Write("Razão da PA: ");
+            Razao = Int32.Parse(Console.ReadLine());
+            Console.Write("{0} ->", Primeirotermo);
+            Next = Primeirotermo;
+
+            while(count <10)
+            {
+                
+                Next = Next + Razao;
+                Console.Write("{0} -> ", Next);
+                count+=1;
+            }
+
+            Console.Write(" FIM");
+        }
+    }
+}
