@@ -1,0 +1,89 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class KnightController : MonoBehaviour
+{
+
+    public float speed = 4;
+    float rotSpeed = 80;
+    float rot = 0;
+    float gravity = 8;
+
+    // Essas variáveis servem para checar se o player está tocando o chão ou não.
+
+    public bool isGrounded; //Irá verificar se o player toca o chão ou não para isso ele precisará de um contexto de outras informações ( checar a posição do player com base na distancia do player para o chão)
+    public LayerMask plane; //Variavel que irá criar a camada de onde irá calcular a distancia da esfera entre o personagem e essa layer.
+    public float radios; //Variável que irá criar o raio da esfera
+    public Transform groundCheck; //Variável que irá chegar a posição do personagem (da esfera criada pelo Physics.CheckSphere)
+
+       
+    Vector3 moveDir = Vector3.zero;
+    CharacterController controller;
+    Animator anim;
+
+    void Movement() //Criou um método ou função que irá chegar de isGrounded é verdadeiro ou falso. Se for verdadeiro irá executar a função
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, radios, plane);
+
+        /*A variável boleana recebe uma classe chamada Physics, a qual utiliza o metodo CheckSphere que cria esferas. 
+        Esta recebe obrigatoriamente tres parametros: position, radios e LayerMask. Ou seja, o Physics.CheckSphere irá 
+        checar a posição do personagem e comparar a distância do esfera criada até o layerMask que é o chão. Para isso eu precisei criar
+        no unity um empty object e torna-lo filho do personagem e no objeto plano (chão) eu criei uma layer e dei o nome de Ground. Caso faça 
+        a chegagem e perceba que a esfera que esta no personagem toca o chão entao a variavel isGrounded irá aceitar como verdadeiro e vai executar 
+        os comandos.
+        */
+
+        if (isGrounded)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                anim.SetInteger("condition", 1);
+                moveDir = new Vector3(0, 0, 1);
+                moveDir *= speed;
+                moveDir = transform.TransformDirection(moveDir);
+                Debug.Log("Key W pressed");
+            }
+            if (Input.GetKeyUp(KeyCode.W))
+            {
+                anim.SetInteger("condition", 0);
+                moveDir = new Vector3(0, 0, 0);
+            }
+            if(Input.GetKey(KeyCode.S))
+            {
+                anim.SetInteger("condition", 1);
+                moveDir = new Vector3(0, 0, -1);
+                moveDir *= speed;
+                moveDir = transform.TransformDirection(moveDir);
+
+            }
+            if(Input.GetKeyUp(KeyCode.S))
+            {
+                anim.SetInteger("condition", 0);
+                moveDir = new Vector3(0, 0, 0);
+            }
+        }
+
+        rot += Input.GetAxis("Horizontal") * rotSpeed * Time.deltaTime;
+        transform.eulerAngles = new Vector3(0, rot, 0);
+
+        moveDir.y -= gravity * Time.deltaTime;
+        controller.Move(moveDir * Time.deltaTime);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        controller = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
+        Debug.Log(controller.isGrounded ? "GROUNDED" : "NOT GROUNDED");// Condicional ternario: Verificar se meu personagem is grounded ou nao
+    }
+
+   
+
+    // Update is called once per frame
+    void Update()
+    {
+        Movement();
+    }
+}
